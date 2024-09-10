@@ -29,13 +29,13 @@
           const deliverableCard = {};
           card.src =""
           card.title =""
-          
+
       const deliverableCards = ["Admin guide", "Help file", "Manual", "Policy (IT)", "Story boards", "UX writing","Wireframe","Workflow diagrams"];
 
       for (position = 0; position < deliverableCards.length; position++) { 
-        const = deliverableCards[position];
-        const deliverableCardString = convertCard(deliverableCard);
-          mainTag.innerHTML = mainTag.innerHTML + deliverableCardString
+        const deliverableCard = deliverableCards[position];
+        const deliverableCardString = bootstrapCard(deliverableCard);
+          mainTag.innerHTML += deliverableCardString
       }
   
 
@@ -120,6 +120,7 @@
         <a href="portfolio.html">Portfolio</a><br>
         <a href="resume.html">Resume</a><br>
         <a href="contact.html">Contact</a><br>
+        <a href="about.html">About</a>
       </p>
     </div>
     <div>
