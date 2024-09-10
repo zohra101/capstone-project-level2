@@ -11,113 +11,48 @@
       <a class="nav-link" href="portfolio.html">Portfolio</a>
       <a class="nav-link" href="resume.html">Resume</a>
       <a class="nav-link active text-bg-dark" href="contact.html">Contact</a>
+      <a class="nav-link" href="about.html">About</a>
     </nav>
   </div>
 </head>
 
 <body class="p-3 bg-info-subtle">
-  <header></header>
-  <img alt="pageHeader" width="100%"
-    src="assets\images\bridge.withtext2.png" />
+  <header>
+    <img alt="siteHeader" width="100%" src="assets\images\bridge.withtext2.png" />
   </header>
-  <main class="p-3">
-    <h3 id="aboutMe">About me</h3>
-    <table>
-      <tr>
-        <td class="p-3">
-          <div class="card" style="width: 18rem;">
-            <img
-              src="https://cdn.glitch.global/a109742b-8674-412b-aa83-959ed6ee518b/thumbnails%2Fimage000001.JPEG?1722375773517"
-              class="card-img-bottom" alt="alex">
-            <div class="card-body">
-              <h6 class="card-title">Alex at Holi Baton Rouge, 2024</h6>
-            </div>
-          </div>
-          <br />
-        </td>
-        <td></td>
-        <td class="p-3">
+  <main>
+    <h3 id="sendMessage" class="m-3">Send a message</h3>
+    <div class="m-3">
+    If you have any questions about my services, please fill out and submit the form below.
+    </div>
+    <div class="container m-1">
+      <form>
+        <div class="p-3">
+          <span style="font-weight:bold;">Contact Type</span><br>
+          <input type="radio" id="individual" c class="p-2"/>   
+          <label for="individual">Individual</label>
+          <input type="radio" id="business" name="contactType" class="p-2 ms-2"/> 
+          <label for="company">Company</label>
+        </div>
+        <div class="p-3">
+         <span style="font-weight:bold;"><label for="contactName">Contact Name</label><br></span> 
+          <input type="text" id="contactName" name="contactName" placeholder="First Last"/>
+        </div>
+        <div class="p-3">
+         <span style="font-weight:bold;"><label for="message">Message</label><br></span> 
+          <textarea id="message" name="message" cols="75" placeholder="Enter your message here."></textarea>
+        </div>
+        <div class="p-3">
           <p>
-            A writer since third grade, during high school (in New Jersey), my
-            dad wanted to buy me a really big present. "Do you want a computer
-            like your cousins?" And so began my war between art and computing.
-            I graduated with both journalism and programming classes, and
-            served as the co-editor-in-chief of both the school paper and
-            yearbook (thankfully, not in the same year!). At Rutgers, I
-            dropped computer science because I had more fun around books, old
-            things, and people; I majored in English and Italian language and
-            literature, with a minor in Mediaeval Studies focused on European
-            history.
+            <button id="submitMessage"class="p-2 btn text-bg-dark">Submit</button>
           </p>
-
-          <p>
-            What can you do with an English degree? Almost anything! After
-            selling computers and office machines at Sears, I joined inbound
-            sales and then technical supoort at a call center, until the
-            company went out of business. On a sales force automation help
-            desk, supporting CRM software and equipment for biotech and pharma
-            sales representatives, I trainied new techs and wrote a lot of
-            SOPs. Working directly with both clients and technical staff gave
-            me unparalleled insight into the needs of users of all levels of
-            backgrpund, experience, and goals.
-          </p>
-
-          <p>
-            Have you tried explaining that after being on the phone all day,
-            talking on the phone is the last thing you want to do? Knowing an
-            advanced degree would help my career, I researched programs in
-            communications, creative writing, and Italian, and came across
-            technical writing. Realizing this field would combine my loves for
-            technology and written words, plus allow more energy for people
-            outside work, I enrolled in the fantastic certificate program at
-            the New Jersey Institute of Technology, and rolled right into the
-            Master's.
-          </p>
-
-          <p>
-            Computer-based training, knowledge management, and user-centered
-            design research completed, I relocated to Baton Rouge, LA, to
-            become a business intelligence developer. (You read that
-            correctly, not a technica writer.) I always liked tinkering with
-            databases, and an opportunity to move out of the cold weather?
-            Yes! When our team moved into the Application Development
-            umbrella, developers and managers alike were excited to acquire a
-            technical writer to take over documenting the software they
-            produced.
-          </p>
-        </td>
-      </tr>
-    </table>
-    <hr />
-
-    <h3 id="sendMessage">Send a message - this form is still under construction</h3>
-    <p>
-      If you have any questions about my services, please fill out and submit the form below.
-    </p>
-    <form class="m-1">
-      <div class="p-3">
-        <h5>Name</h5>
-        <input type="text" width=""/>
-      </div>
-      <div class="p-3">
-        <h5>Contact Type</h5>
-        <input type="radio" name="contactType" /> Individual     
-        <input type="radio" name="contactType" /> Company
-      </div>
-      <div class="p-3">
-        <h5>Message</h5>
-        <textarea width="">Enter your message here.</textarea>
-      </div>
-      <div class="m-3">
-        <p>
-          <button class="p-2 btn text-bg-dark">Submit</button>
-        </p>
-      </div>
-    </form>
+        </div>
+      </form>
+    </div>
   </main>
   <br />
-
   <hr>
+  
   <footer>
     <div class="m-5"> <b>Sitemap</b>
       <p>

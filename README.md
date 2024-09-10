@@ -48,7 +48,7 @@ Set Branch to main
 Click save
 Wait a few minutes for the link to your website to appear
 
-//view the value of origin
+//view the value of origin and the URL of other remote repositories
 git remote -v
 
 //change the origin
