@@ -8,7 +8,6 @@ function bootstrapCard(card) {
                             </div>
                         </div>`;
     return cardString;
-    console.log(cardString);
  } 
 
 /* function personalize() {
