@@ -1,33 +1,20 @@
-function bootstrapCard2(card) {  
+function bootstrapCard(card) {  
    const cardString = `<div class="card">
-        <img class="card-img-bottom" src="${card.src} alt="${card.title}"/>
-            <div class="card-body">
-                <h3 class="card-title">${card.description}</h3>
-            </div>
-        </div>`;
+                            <img class="card-img-top" 
+                                src="${card.src}"
+                                alt="${card.title}"/>
+                             <div class="card-body">
+                                <h3 class="card-title">${card.description}</h3>
+                            </div>
+                        </div>`;
     return cardString;
+    console.log(cardString);
  } 
 
-function collectMessage() {
-//contactType -- individual or company
-contactType = prompt(); 
-
-//contactName -- first and last name
-contactName = prompt();
-
-//userMessage - message
-userMessage = prompt();
-}
-
-function returnToTop () {
-//return the user to the top of the current page when they click the "Top" button at the bottok of the page
-
-}
-
-function personalize() {
+/* function personalize() {
 //get user's first name
 const firstName = prompt("Enter your first name.");
 
 //check if first name is not a number
 notNumber = isNaN(firstName)
-}
+} */

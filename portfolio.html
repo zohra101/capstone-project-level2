@@ -43,51 +43,55 @@
     </div>
     <script>
       const card1 = {};
-      card.src="assets/images/admin_guide_1_1024.png";
-      card.alt="adminGuide";
-      card.description="I created this administrator's guide template for a previous employer. These guides were paired with a user guide for each application. Since I was also one of the software quality analysts, I outlined both guides after reviewing the application's business requirements and technical specifications, and developed the content while performing QA. After the final round of bug fixes, both guides were delivered to the user acceptance testing leads for UAT and ownership.";
+      card1.src="assets/images/admin_guide_1_1024.png";
+      card1.alt="adminGuide";
+      card1.description="I created this administrator's guide template for a previous employer. These guides were paired with a user guide for each application. Since I was also one of the software quality analysts, I outlined both guides after reviewing the application's business requirements and technical specifications, and developed the content while performing QA. After the final round of bug fixes, both guides were delivered to the user acceptance testing leads for UAT and ownership.";
 
       const card2 = {};
-      card.src="assets/images/help_file_1_1024.png";
-      card.alt="helpFile";
-      card.description="I created this help file using RoboHelp as an assignment for a course on knowledge management and computer-based training design.";
+      card2.src="assets/images/help_file_1_1024.png";
+      card2.alt="helpFile";
+      card2.description="I created this help file using RoboHelp as an assignment for a course on knowledge management and computer-based training design.";
 
       const card3 = {};
-      card.src="assets/images/manual_1_1024.png";
-      card.alt="manual";
-      card.description="This excerpt is from a side project where I consolidated a third-party vendor's help file and hundreds of documents from two business divisions into a 300-page user manual. The original files were in HTMLhelp and multiple SharePoint libraries and the output was a 300-page Word document.";
+      card3.src="assets/images/manual_1_1024.png";
+      card3.alt="manual";
+      card3.description="This excerpt is from a side project where I consolidated a third-party vendor's help file and hundreds of documents from two business divisions into a 300-page user manual. The original files were in HTMLhelp and multiple SharePoint libraries and the output was a 300-page Word document.";
 
       const card4 = {};
-      card.src="assets/images/policy_IT_1_1024.png";
-      card.alt="policyIT";
-      card.description="For CMMI certification, I drafted policy and procedure documents for the Applicatio Developoment group, working with a business analyst/project coordinator to validate the content.";
+      card4.src="assets/images/policy_IT_1_1024.png";
+      card4.alt="policyIT";
+      card4.description="For CMMI certification, I drafted policy and procedure documents for the Applicatio Developoment group, working with a business analyst/project coordinator to validate the content.";
 
       const card5 = {};
-      card.src="assets/images/storyboards.png";
-      card.alt="storyboards";
-      card.description="While I was in graduate schoool specializing in usability, I was a help desk team lead. Several team members, myself included, reported that the keyword searching in our tracking system wasn't robust. We also stored information in different file shares on network drives. I designed these storyboards to demonstrate how a centralized intranet site to store our policies and procuedures and a more robust searchable knowlesge base would improve both efficiency and end user (in this case, the employees) satisfaction, and also submitted it as my Master's project.";
+      card5.src="assets/images/storyboards.png";
+      card5.alt="storyboards";
+      card5.description="While I was in graduate schoool specializing in usability, I was a help desk team lead. Several team members, myself included, reported that the keyword searching in our tracking system wasn't robust. We also stored information in different file shares on network drives. I designed these storyboards to demonstrate how a centralized intranet site to store our policies and procuedures and a more robust searchable knowlesge base would improve both efficiency and end user (in this case, the employees) satisfaction, and also submitted it as my Master's project.";
 
       const card6 = {};
-      card.src="";
-      card.alt="UXwriting";
-      card.description="TBD";
+      card6.src="assets/images/storyboards.png";
+      card6.alt="UXwriting";
+      card6.description="TBD";
 
       const card7 = {};
-      card.src="assets/images/wireframe.png";
-      card.alt="wireframe";
-      card.description="On my lsat project, I learned to use a design system and Figma. Due to confidentiality agreements, I cannot share any of the work produced for the client. I created this wireframe to plan this portfolio website.";
+      card7.src="assets/images/wireframe.png";
+      card7.alt="wireframe";
+      card7.description="On my lsat project, I learned to use a design system and Figma. Due to confidentiality agreements, I cannot share any of the work produced for the client. I created this wireframe to plan this portfolio website.";
 
       const card8 = {};
-      card.src="";
-      card.alt="Workflow diagrams";
-      card.description="TBD";
+      card8.src="assets/images/storyboards.png";
+      card8.alt="Workflow diagrams";
+      card8.description="TBD";
 
       const cards = [card1. card2, card3, card4, card5, card6, card7, card8];
-
-    /*   const cardString = bootstrapCard2(cardObject); */
       
-
       let position=0;
+      for (postion=0; position < cards.length; position ++) {
+        const card = cards[position];
+        const cardString = bootstrapCard(card);
+        mainTag.innerHTML += cardString;
+      }
+  
+/*       let position=0;
       for (row=0; row<4; row++) { 
         //opening row tag string
         rowString='<div class="row">'
@@ -103,7 +107,7 @@
             position++
           }
       } 
-
+ */
     </script>
    
 
