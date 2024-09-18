@@ -10,6 +10,24 @@ function bootstrapCard(card) {
     return cardString;
  } 
 
+ function createColumn(contentString) {
+    const columnString = `<div class="col">${contentString}</div>`;
+    return columnString;
+  }
+  
+  function createRow(columnString) {
+    const rowString = `<div class="row">
+        ${columnString}</div>`;
+    return rowString;
+  }
+  function createContainer(rowString){
+    const containerString = `<div class="container">
+      ${rowString}
+    </div>`;
+    return containerString;
+  }
+
+  
 /* function personalize() {
 //get user's first name
 const firstName = prompt("Enter your first name.");

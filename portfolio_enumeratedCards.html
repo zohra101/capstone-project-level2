@@ -87,21 +87,21 @@
 
       const cards = [card1, card2, card3, card4, card5, card6, card7, card8];
       
-    let index=0;
+    let position=0;
       let rowString=""; 
       let columnString="";
       for (row=0; row<4; row++) { 
         //opening row tag string
           for (col=0; col<2; col++) {
             //opening column tag string
-            const card = cards[index];
+            const card = cards[position];
             //card string
            columnString +='<div class="col">';
             columnString += bootstrapCard(card)
             //closing tag string
             columnString += '</div>';
             //increment card position
-            index++
+            position++
           }
         rowString +=`<div class="row">${columnString}</div>`;
         columnString="";
