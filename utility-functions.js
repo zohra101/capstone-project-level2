@@ -1,16 +1,17 @@
 function bootstrapCard(card) {  
-   const cardString = `<div class="card m-4 p-4">
+   const cardString = `<div class="card m-4 p-4 bg-dark text-light">
                             <img class="card-img-top" 
                                 src="${card.src}"
                                 alt="${card.title}"/>
                              <div class="card-body">
-                                <h6 class="card-title">${card.description}</h6>
+                                <h5 class="card-title p-1">${card.title}</h5>
+                                <p class="card-text p-1">${card.description}</p>
                             </div>
                         </div>`;
     return cardString;
  } 
 
- function createColumn(contentString) {
+/*  function createColumn(contentString) {
     const columnString = `<div class="col">${contentString}</div>`;
     return columnString;
   }
@@ -25,9 +26,14 @@ function bootstrapCard(card) {
       ${rowString}
     </div>`;
     return containerString;
+  } */
+
+  function diaplayOnClick() {
+    output.innerHTML = "Your message has been sent.";
   }
 
-  
+
+
 /* function personalize() {
 //get user's first name
 const firstName = prompt("Enter your first name.");
