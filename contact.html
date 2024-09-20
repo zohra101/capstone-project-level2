@@ -35,13 +35,13 @@
        <p> If you have any questions about my services, please fill out and submit the form below.</p>
         </div>
         <div class="container ms-3">
-          <form>
+          <form id="outputTag">
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;">Contact Type</span><br>
-                <input type="radio" id="individual" c class="p-2"/>   
+                <input type="radio" id="individual" lass="p-2"/>   
                 <label for="individual">Individual</label>
-                <input type="radio" id="business" name="contactType" class="p-2 ms-2"/> 
+                <input type="radio" id="company" class="p-2 ms-2"/> 
                 <label for="company">Company</label>
               </div>
             </div>
@@ -60,24 +60,25 @@
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactPhone">Contact Phone</label><br></span> 
-                <input type="text" id="contactPhpne" class="inputs" placeholder="555-555-5555"/>
+                <input type="text" id="contactPhone" class="inputs" placeholder="5555555555"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
-                <span style="font-weight:bold;"><label for="message">Message</label><br></span> 
+                <span style="font-weight:bold;"><label for="userMessage">Message</label><br></span> 
                 <textarea id="userMessage" class="inputs" placeholder="Enter your message here."></textarea>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">    
-                <button type="button" class="btn btn-dark p-2" id="submitEmail" onclick="diaplayOnClick();">
-                  Submit</button>
+                <button onclick="displayMessage()">Submit</button>
               </div>
             </div>
           </form>
         </div>
     </div>
+
+  <div id="message"></div>
   </main>
   <br />
   <hr>

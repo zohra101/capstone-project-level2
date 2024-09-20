@@ -28,9 +28,17 @@ function bootstrapCard(card) {
     return containerString;
   } */
 
-  function diaplayOnClick() {
-    output.innerHTML = "Your message has been sent.";
-  }
+function displayMessage(message) {
+ window.outputTag.innerHTML = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
+}
+
+function validateContactPhone() {
+  let isNotNumber = isNaN(contactPhone);
+  if (isNotNumber) {
+    return window.outputTag.innerHTML = "Please enter only numbers for Contact Phone.";
+  } else {}
+}
+  
 
 
 
