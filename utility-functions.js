@@ -1,6 +1,7 @@
 function bootstrapCard(card) {  
    const cardString = `<div class="card m-4 p-4 bg-dark text-light">
                             <img class="card-img-top" 
+                                id="${card.id}"
                                 src="${card.src}"
                                 alt="${card.title}"/>
                              <div class="card-body">
@@ -11,41 +12,7 @@ function bootstrapCard(card) {
     return cardString;
  } 
 
-/*  function createColumn(contentString) {
-    const columnString = `<div class="col">${contentString}</div>`;
-    return columnString;
-  }
-  
-  function createRow(columnString) {
-    const rowString = `<div class="row">
-        ${columnString}</div>`;
-    return rowString;
-  }
-  function createContainer(rowString){
-    const containerString = `<div class="container">
-      ${rowString}
-    </div>`;
-    return containerString;
-  } */
-
-function displayMessage(message) {
+function displaySentMessage(message) {
  window.outputTag.innerHTML = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
 }
 
-function validateContactPhone() {
-  let isNotNumber = isNaN(contactPhone);
-  if (isNotNumber) {
-    return window.outputTag.innerHTML = "Please enter only numbers for Contact Phone.";
-  } else {}
-}
-  
-
-
-
-/* function personalize() {
-//get user's first name
-const firstName = prompt("Enter your first name.");
-
-//check if first name is not a number
-notNumber = isNaN(firstName)
-} */
