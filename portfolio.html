@@ -62,6 +62,8 @@
       </div>
     </div>
     <script>
+    //lGENERATE A BOOTSTRAP GRID OF CARDS DISPLAYING PORTFOLIO ITEMS
+      //DECLARE CARD OBJECTS, THEIR PROPERTIES, AND THE VALUES FOR THE ARRAY
       const card1 = {};
       card1.id = "adminGuide";
       card1.src = "assets/images/admin_guide_1_1024.png";
@@ -118,33 +120,44 @@
       card8.title = "Workflow diagram - user security structure";
       card8.description = "Many projects on which I serve need diagrams--database ERDs, org charts, process maps, user profiles/security, workflows, etc. I'm very visual so these diagrams help me as well as my clients and team members. While ypically I work with Microsoft Visio, for this sample I decided to give Lucidchart as spin.";
 
-
+      //DECLARE THE ARRAY
       const cards = [card1, card2, card3, card4, card5, card6, card7, card8];
 
+      //DECLARE THE INDEX VALUE
       let index = 0;
+
+      //SET ROWSTRING AND COLUMNSTRING TO BLANK TO INITIALIZE THE LOOP
       let rowString = "";
       let columnString = "";
 
+      //INITALIZE THE LOOP STARTING WITH THE ROWS
       for (row = 0; row < 5; row++) {
-        //opening row tag string
+        //initliaze the Column loop for 2 columns
         for (col = 0; col < 2; col++) {
-          //opening column tag string
+          //declare how the cards will be indexed from the array
           const card = cards[index];
+          //declare the boolean to check for undefined cards when the array is empty
           const doesCardExist = card !== undefined;
-          //card string
+          //if card data exists, then the loop will generate the card
           if (doesCardExist) {
+            //start the column output HTML
             columnString += '<div class="col">';
+            //call the Bootstrap function to generate the HTML output that goes into the div
             columnString += bootstrapCard(card)
-            //closing tag string
+            //close the div tag for the card
             columnString += '</div>';
-            //increment card position
+            //increment the card position to generate the next card
             index++
           }
+          //if no card data exists (undefined), create an empty column
           else {columnString +='<div class="col"></div>';}
         }
+        //generate the row output HTML parent for the columns
         rowString += `<div class="row">${columnString}</div>`;
+        //reset the column string to run the next card
         columnString = "";
       }
+      //generate the parent container tag for the cards Bootsrap grid
       mainTag.innerHTML += `<div class="container">${rowString}</div>`;
     </script>
 

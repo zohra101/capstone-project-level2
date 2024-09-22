@@ -1,4 +1,6 @@
+//AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapCard(card) {  
+   //declare cardString variable that outputs HTML with Bootstrap CSS and pulls card data from an array
    const cardString = `<div class="card m-4 p-4 bg-dark text-light">
                             <img class="card-img-top" 
                                 id="${card.id}"
@@ -12,6 +14,7 @@ function bootstrapCard(card) {
     return cardString;
  } 
 
+ //ON CONTACT FORM SUBMIT, DISPLAY A MESSAGE INFORMING THE USER THEIR MESSAGE IS SENT
 function displaySentMessage(message) {
  window.outputTag.innerHTML = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
 }
