@@ -28,12 +28,10 @@ p {
   margin: 15px;
 }
 
-p.label {
-  text-align: left;
+#skill {
   font-size: 15px;
-  color: #20B2AA;
-  width: 75%;
-  margin: 15px;
+  color: #008B8B;
+  font-weight: bold;
 }
 
 /* a {
