@@ -7,4 +7,4 @@ git pull origin main [oid repo]
 
 git remote set-url origin [new repo]
 
-git push -set upstream origin main
+git push --set up-stream origin main
