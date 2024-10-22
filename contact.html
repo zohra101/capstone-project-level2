@@ -48,31 +48,32 @@
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactName">Contact Name</label><br></span> 
-                <input type="text" id="contactName" class="inputs" placeholder="First Last"/>
+                <input required type="text" id="contactName" class="inputs" placeholder="First Last"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactEmail">Contact Email</label><br></span> 
-                <input type="email" id="contactEmail" class="inputs" placeholder="address@domain.com"/>
+                <inputrequired type="email" id="contactEmail" class="inputs" placeholder="address@domain.com"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactPhone">Contact Phone</label><br></span> 
-                <input type="tel" id="contactPhone" class="inputs" placeholder="5555555555"/>
+                <input required minlength="10" maxlength="13" type="tel" id="contactPhone" class="inputs" placeholder="01 5555555555"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="userMessage">Message</label><br></span> 
-                <textarea id="userMessage" class="inputs" placeholder="Enter your message here."></textarea>
+                <textarea required id="userMessage" class="inputs" placeholder="Enter your message here."></textarea>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <!-- CALLS A FUNCTION THAT DISPLAYS A MESSAGE WHEN THE SUBMIT BUTTON IS CLICKED -->
-                <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button>
+                <!-- <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button> -->
+                <button class="btn btn-dark">Submit</button>
               </div>
             </div>
           </form>
