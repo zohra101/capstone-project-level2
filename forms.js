@@ -14,6 +14,7 @@
 
  //PROCESS THE FORM
  const emailSubmitMessage = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
+ const scheduleSubmitMessage = "<br>" + "<h5>Your consultation request has been submitted. Please check for an email confirmation in th enext 24 hours.</h5>" + "<br>";
  function displayMessage(message) {
   window.outputTag.innerHTML = message;
  }
