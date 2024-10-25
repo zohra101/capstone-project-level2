@@ -18,4 +18,9 @@ function bootstrapCard(card) {
 function displaySentMessage(message) {
  window.outputTag.innerHTML = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
 }
+//DISPLAYS A MESSAGE
+function display(message) {
+   document.write(message);
+  }
 
+//
