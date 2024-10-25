@@ -15,7 +15,7 @@ function bootstrapCard(card) {
  } 
 
  //ON CONTACT FORM SUBMIT, DISPLAY A MESSAGE INFORMING THE USER THEIR MESSAGE IS SENT
-const submitMessage = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
+const emailSubmitMessage = "<br>" + "<h5>Your message has been sent.</h5>" + "<br>";
 function displayMessage(message) {
  window.outputTag.innerHTML = message;
 }
