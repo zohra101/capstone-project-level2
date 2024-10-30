@@ -22,7 +22,7 @@ function bootstrapPortfolioCard(card) {
                              <div class="card-body">
                                 <h5 class="card-title p-1">${card.title}</h5>
                                 <p class="card-text p-1">${card.description}</p>
-                                <href="${card.form}">
+                                <a class="card-form">${card.form}</a>
                             </div>
                         </div>`;
     return cardString;

@@ -54,16 +54,16 @@
       card1.id = "sendEmail";
       card1.title = "Send an email";
       card1.description = "Please complete the form below to send me an email.";
-      card1.form="##send-email.html";
-
+      card1.form="href='send-email.html' target='_blank'";
+  
       const card2 = {};
       card2.id = "scheduleConsult";
       card2.title = "Schedule a consultation";
       card2.description = "To schedule a 30-minute free consultation to assess your needs, please complete the form below.";
-      card2.form = "##schedule-call.html";
+      card2.form
 
       //DECLARE THE ARRAY
-      const cards = [card1, card2];
+      const cards = [card1, card2]; 
 
       //DECLARE THE INDEX VALUE
       let index = 0;
@@ -73,9 +73,9 @@
       let columnString = "";
 
       //INITALIZE THE LOOP STARTING WITH THE ROWS
-      for (row = 0; row < 3; row++) {
+      for (row = 0; row < 2; row++) {
         //initliaze the Column loop for 2 columns
-        for (col = 0; col < 2; col++) {
+        for (col = 0; col < 3; col++) {
           //declare how the cards will be indexed from the array
           const card = cards[index];
           //declare the boolean to check for undefined cards when the array is empty
