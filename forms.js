@@ -1,5 +1,4 @@
-
- /* function myProcessForm(event) {
+/* function myProcessForm(event) {
     document.write("Form Processed");
 }*/
 
@@ -18,5 +17,3 @@
  function displayMessage(message) {
   window.outputTag.innerHTML = message;
  }
-
-
