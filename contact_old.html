@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:send-email.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +6,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="utility-functions.js"></script>
-    <script src="forms.js"></script>
     <style>
       body {background-color: ivory;}
       .inputs {width: 35%}
@@ -22,10 +18,7 @@
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="portfolio.html">Portfolio</a>
         <a class="nav-link" href="resume.html">Resume</a>
-        <a class="nav-link" href="send-email.html">Send Email</a>
-        <a class="nav-link active bg-dark text-light" href="schedule-call.html">Schedule</a>
-        <a class="nav-link" href="send-email.html">Send Email</a>
-        <a class="nav-link active bg-dark text-light" href="schedule-call.html">Schedule</a>
+        <a class="nav-link active bg-dark text-light" href="send-email.html">Contact</a>
         <a class="nav-link" href="about.html">About</a>
       </nav>
     <img alt="siteHeader" width="100%" src="assets\images\siteHeader_4kp_rev2.png" />
@@ -38,10 +31,8 @@
           <strong>Warning!</strong> This page is still under construction; submissions are currently disabled.
           <button class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-        <h3 id="scheduleConsult">Schedule a consultation</h3>
-       <p> To schedule a 30-minute free consultation to assess your needs, please complete the form below.git b</p>
-        <h3 id="scheduleConsult">Schedule a consultation</h3>
-       <p> To schedule a 30-minute free consultation to assess your needs, please complete the form below.git b</p>
+        <h3 id="sendMessage">Send an email</h3>
+       <p> If you have any questions about my services, please fill out and submit the form below.</p>
         </div>
         <div class="container ms-3">
           <form id="outputTag">
@@ -57,39 +48,38 @@
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactName">Contact Name</label><br></span> 
-                <input required type="text" id="contactName" class="inputs" placeholder="First Last"/>
+                <input type="text" id="contactName" class="inputs" placeholder="First Last"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactEmail">Contact Email</label><br></span> 
-                <input required type="email" id="contactEmail" class="inputs" placeholder="address@domain.com"/>
+                <input type="text" id="contactEmail" class="inputs" placeholder="address@domain.com"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactPhone">Contact Phone</label><br></span> 
-                <input required minlength="10" maxlength="13" type="tel" id="contactPhone" class="inputs" placeholder="01 5555555555"/>
+                <input type="text" id="contactPhone" class="inputs" placeholder="5555555555"/>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
-                <span style="font-weight:bold;"><label for="scheduleConsult">Select a Date & Time</label><br></span> 
-                <input required type="datetime-local" id="scheduleConsult" class="inputs" placeholder=""></input>
+                <span style="font-weight:bold;"><label for="userMessage">Message</label><br></span> 
+                <textarea id="userMessage" class="inputs" placeholder="Enter your message here."></textarea>
               </div>
             </div>
             <div class="row p-2">
               <div class="col">
                 <!-- CALLS A FUNCTION THAT DISPLAYS A MESSAGE WHEN THE SUBMIT BUTTON IS CLICKED -->
-                <!-- <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button> -->
-                  <button class="btn btn-dark" onclick="displayMessage(scheduleSubmitMessage)">Submit</button></div>
-          
+                <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button>
               </div>
             </div>
           </form>
         </div>
     </div>
-    <div id="message"></div>
+
+  <div id="message"></div>
   <br />
   <hr>
   </main>
@@ -116,4 +106,3 @@
 </body>
 
 </html>
-

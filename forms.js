@@ -4,10 +4,9 @@
 
  //OVERIDES BROWSER DEFAULT BEHAVIOR OF RESETTING THE FORM
  function processForm(event) { 
-  
     const form = event.target;
     const input = form[0];
-        const value = input.value;
+    const value = input.value;
     output(displayMessage);
  }
 
