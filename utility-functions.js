@@ -1,6 +1,5 @@
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapPortfolioCard(card) {  
-function bootstrapPortfolioCard(card) {  
    //declare cardString variable that outputs HTML with Bootstrap CSS and pulls card data from an array
    const cardString = `<div class="card m-4 p-4 bg-dark text-light">
                             <img class="card-img-top" 
@@ -27,4 +26,4 @@ function bootstrapPortfolioCard(card) {
 //                             </div>
 //                         </div>`;
 //     return cardString;
-//  } 
+//   }
