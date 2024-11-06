@@ -31,7 +31,7 @@ h3,
 }
 
 .list-group-item-color2 {
-  background-color: rgb(218, 242, 250);
+  background-color: rgb(218, 242, 250), 1;
 }
 
 //Opacity
@@ -45,5 +45,7 @@ h3,
 //Box-shadow
 
 //Background image
-
+.bg-image {
+  background-image: $thumbsUp;
+}
 
