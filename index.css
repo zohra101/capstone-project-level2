@@ -1,0 +1,20 @@
+body {
+  background-color: ivory;
+  color: black;
+}
+body:hover {
+  color: violet;
+}
+
+h3,
+.list-group-item {
+  color: black;
+}
+
+.list-group-item-color1 {
+  background-color: rgb(91, 169, 196);
+}
+
+.list-group-item-color2 {
+  background-color: rgb(218, 242, 250);
+}/*# sourceMappingURL=index.css.map */

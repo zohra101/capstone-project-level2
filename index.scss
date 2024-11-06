@@ -1,16 +1,38 @@
-//Nesting syntax
-
-//Parent syntax
+//Nesting & parent syntax
+body {
+  background-color: ivory;
+  color: black;
+  &:hover {
+      color: violet;
+  }
+}
 
 //Mixin
 
 //Custom font
+// @font-face {
+// font-family: ;
+// src: ; 
+// }
 
 //Colors (use variables)
+h3,
+.list-group-item {
+  color: black
+}
 
 //Fonts (use variables)
 
+
 //RGBA color
+.list-group-item-color1 { 
+  background-color: rgba(91, 169, 196, 1);
+
+}
+
+.list-group-item-color2 {
+  background-color: rgb(218, 242, 250);
+}
 
 //Opacity
 
@@ -24,15 +46,4 @@
 
 //Background image
 
-body {
-    background-color: ivory;
-  }
 
-  h3,
-  .list-group-item {
-    color: black
-  }
-
-  a:hover {
-    color: violet;
-  }
