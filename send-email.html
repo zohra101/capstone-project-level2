@@ -37,7 +37,7 @@
        <p> If you have any questions about my services, please fill out and submit the form below.</p>
         </div>
         <div class="container ms-3">
-          <form id="outputTag">
+          <form id="outputTag" onsubmit="submitForm(event)">
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;">Contact Type</span><br>
@@ -62,7 +62,7 @@
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="contactPhone">Contact Phone</label><br></span> 
-                <input required minlength="10" maxlength="13" type="tel" id="contactPhone" class="inputs" placeholder="01 5555555555"/>
+                <input required type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="contactPhone" class="inputs" placeholder="01 5555555555"/>
               </div>
             </div>
             <div class="row p-2">
@@ -75,7 +75,7 @@
               <div class="col">
                 <!-- CALLS A FUNCTION THAT DISPLAYS A MESSAGE WHEN THE SUBMIT BUTTON IS CLICKED -->
                 <!-- <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button> -->
-                  <button class="btn btn-dark" onclick="displayMessage(emailSubmitMessage)">Submit</button></div>
+                  <button class="btn btn-dark" onclick="serverResponse(emailSubmitMessage)">Submit</button></div>
             
               </div>
             </div>
