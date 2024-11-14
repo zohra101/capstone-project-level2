@@ -1,3 +1,12 @@
+//
+function display(message) {
+   document.write(message);
+}
+
+function output (message) {
+window.outputTag.innerHTML += message;
+}
+
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapPortfolioCard(card) {  
    //declare cardString variable that outputs HTML with Bootstrap CSS and pulls card data from an array
