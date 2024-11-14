@@ -23,6 +23,7 @@
     setTimeout(serverResponse, 5000);
 }
 
+//Email form server simulation
 function serverResponse(message) {
     window.outputTag.innerHTML = message;
 }         
@@ -31,6 +32,21 @@ function serverResponsePromise() {
     const promise = new Promise(serverResolve);
      promise.then(getMessage);
      display(emailSubmitMessage);
+}
+
+function getMessage(resolveValue) {
+    display(resolveValue);
+}
+
+//Consultation form server simulation
+function serverResponse(message) {
+    window.outputTag.innerHTML = message;
+}         
+
+function serverResponsePromise() {
+    const promise = new Promise(serverResolve);
+     promise.then(getMessage);
+     display(scheduleSubmitMessage);
 }
 
 function getMessage(resolveValue) {
