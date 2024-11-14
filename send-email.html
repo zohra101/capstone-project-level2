@@ -37,7 +37,7 @@
        <p> If you have any questions about my services, please fill out and submit the form below.</p>
         </div>
         <div class="container ms-3">
-          <form id="outputTag" onsubmit="handleForm">
+          <form id="outputTag" onsubmit="handleForm(event)">
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;">Contact Type</span><br>
@@ -68,8 +68,7 @@
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;"><label for="userMessage">Message</label><br></span> 
-                <textarea required id="userMessage" minlength="1" maxlength="250"
-                 class="inputs" placeholder="Enter your message here."></textarea>
+                <textarea required id="userMessage" class="inputs" placeholder="Enter your message here."></textarea>
               </div>
             </div>
             <div class="row p-2">
@@ -85,7 +84,6 @@
     </div>
 
     <div id="message"></div>
-    <!-- <div id="spinner" class="spinner-border" style="display: none;"></div> -->
   <br />
   <hr>
   </main>
