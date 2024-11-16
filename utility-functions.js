@@ -3,8 +3,8 @@ function display(message) {
    document.write(message);
 }
 
-function output (message) {
-window.outputTag.innerHTML += message;
+function output(message) {
+window.outputTag.innerHTML = message;
 }
 
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE

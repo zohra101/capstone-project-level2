@@ -37,7 +37,7 @@
        <p> If you have any questions about my services, please fill out and submit the form below.</p>
         </div>
         <div class="container ms-3">
-          <form onsubmit="handleForm()">
+          <form onsubmit="handleSubmit(event)">
             <div class="row p-2">
               <div class="col">
                 <span style="font-weight:bold;">Contact Type</span><br>
@@ -75,7 +75,7 @@
               <div class="col">
                 <!-- CALLS A FUNCTION THAT DISPLAYS A MESSAGE WHEN THE SUBMIT BUTTON IS CLICKED -->
                 <!-- <button class="btn btn-dark" onclick="displaySentMessage()">Submit</button> -->
-                  <button class="btn btn-dark">Submit</button></div>
+                  <button class="btn btn-dark" type="submit">Submit</button></div>
             
               </div>
             </div>
@@ -83,7 +83,7 @@
         </div>
     </div>
 
-    <div id="output"></div>
+    <div id="outputTag"></div>
   <br />
   <hr>
   </main>

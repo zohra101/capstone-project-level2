@@ -1,9 +1,7 @@
  //Form processing messages
 //  const emailSubmitMessage = "<br>" + "<h5>Your message has been sent from" + email + ".</h5>" + "<br>";
  // const scheduleSubmitMessage = "<br>" + "<h5>Your consultation request has been submitted. Confirmation will be sent to" + email + ".</h5>" + "<br>";
-//  function displayMessage(message) {
-//     window.outputTag.innerHTML = message;
-//    }
+
 
  //OVERIDES BROWSER DEFAULT BEHAVIOR OF RESETTING THE FORM
 //  function processForm(event) { 
@@ -13,33 +11,39 @@
 //     output(displayMessage);
 //  }
 
-//Stringify form information 
-function formObject(event) {
-    const inputs = event.target;
-    const formDetails = JSON.stringify(inputs, ["input[2]","input[3]"])
-    return formDetails();
-}
+//Click handler with spinner
+// function handleClick(event) {
+//     // event.preventDefault();
+//     output(`<div class="spinner-border text-primary" role="status"></div>`);
+// }
 
 //Submit handler
 function handleSubmit(event) {
     event.preventDefault();
-    output("<br>" + "<h5>Submitting for " + formDetails() + "...<br>");
-    const promise = makeRequest("https://dummyurl.com");
+    const inputs = event.target;
+    const emailInput = inputs[3];
+    const email = emailInput.value;
+    output("<br>" + "<h5>Submitting for " + email + "...<br>");
+    const promise = new Promise(serverResponse);
     promise.then(parseResponse);
 }
 
-function getServerResponse(resolve) {
-    setTimeout(activateResolve, 5000)
-    
-    function activateResolve () {
-        const response = {
-            message: "<br>" + "<h5>Your message has been sent from" + formDetails() + ".</h5>" + "<br>",
-        };
-       const resolveValue = JSON.stringify(response);
-       resolve(resolveValue);
-    }
+function parseResponse(resolveValue) {
+    const response = JSON.parse(resolveValue);
+    const message = response.message;
+    output(message);
 }
 
-// function parseResponse(resolveValue) {   
-    
-// }
+function serverResponse(resolve) {
+    setTimeout(activateResolve, 5000);
+
+    function activateResolve() {
+        const response={
+            message:"Your message was sent successfully."
+        }
+        const finalResponse = JSON.stringify(response);
+        resolve(finalResponse);
+    }
+ }    
+
+
