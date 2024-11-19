@@ -11,12 +11,6 @@
 //     output(displayMessage);
 //  }
 
-//Click handler with spinner
-function handleClick(event) {
-    // event.preventDefault();
-  
-}
-
 //Submit handler
 function handleSubmit(event) {
     debugger;
@@ -24,12 +18,13 @@ function handleSubmit(event) {
     const inputs = event.target;
     const emailInput = inputs[3];
     const email = emailInput.value;
+    window.spinner.innerHTML = "<div class='spinner-border text-primary'></div>";
     output("<br>" + "<h5>Submitting for " + email + "...</h5><br>");
     const promise = new Promise(serverResponse);
-    promise.then(function submitSpinner(resolveValue) {
-        window.spinner.innerHTML = "<div class='spinner-border text-primary'</div>";
+    promise.then(parseResponse).then(function hideSpinner() {
+        window.spinner.innerHTML="";
         return resolveValue;
-    }).then(parseResponse);
+    })
 }
 
 function parseResponse(resolveValue) {
@@ -39,8 +34,7 @@ function parseResponse(resolveValue) {
 }
 
 function serverResponse(resolve) {
-    setTimeout(activateResolve, 5000);
-
+    setTimeout(activateResolve, 2000);
     function activateResolve() {
         const response={
             message:"<h5>Your message was sent successfully.</h5>"
@@ -48,6 +42,6 @@ function serverResponse(resolve) {
         const finalResponse = JSON.stringify(response);
         resolve(finalResponse);
     }
- }    
+}    
 
 
