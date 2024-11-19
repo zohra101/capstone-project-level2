@@ -1,14 +1,14 @@
+#mixin-welcome {
+  color: rgb(232, 83, 30);
+  text-shadow: 1px 1px rgb(95, 85, 85);
+}
+
 a {
   background-color: ivory;
   color: rgb(7, 58, 41);
 }
 a:hover {
   color: violet;
-}
-
-#mixin-welcome {
-  color: rgb(232, 83, 30);
-  text-shadow: 1px 1px rgb(95, 85, 85);
 }
 
 @font-face {
@@ -24,8 +24,21 @@ a:hover {
   src: url(assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
 }
 body {
+  font-family: OpenSans;
   background-color: ivory;
   color: rgb(2, 5, 61);
+}
+
+h1 {
+  font-family: GreatVibes;
+  font-size: 102;
+  font-weight: 400;
+  position: relative;
+}
+
+.signature {
+  font-family: ComforterBrush;
+  font-size: 86;
 }
 
 .list-group-item-text1 {
@@ -37,21 +50,6 @@ h3,
   color: black;
 }
 
-body {
-  font-family: OpenSans;
-}
-
-h1 {
-  font-family: GreatVibes;
-  font-size: 102;
-  font-weight: 400;
-}
-
-.signature {
-  font-family: ComforterBrush;
-  font-size: 86;
-}
-
 .list-group-item-color1 {
   background-color: rgb(17, 75, 95);
 }
@@ -60,7 +58,7 @@ h1 {
   background-color: rgb(204, 245, 226);
 }
 
-.full {
+.fullOpacity {
   opacity: 1;
 }
 
@@ -85,11 +83,18 @@ h1 {
 }
 
 .bg-image {
-  background-image: url("assets/images/tech_comm.png");
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100%;
+  position: relative;
   height: 100%;
-  opacity: 0.1;
+  width: 100%;
+  display: flex;
+}
+.bg-image::before {
+  content: "";
+  background-image: url("assets/images/tech_comm.png");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0x;
+  left: 0px;
+  opacity: 0.5;
 }/*# sourceMappingURL=index.css.map */
