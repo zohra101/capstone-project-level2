@@ -6,9 +6,12 @@ function handleQuoteOfTheDay() {
     const endPoint = "/qotd";
     const url = proxy + baseUrl + endPoint;
     debugger;
-    const promise = fetch(url, {method: 'no-cors'});
+    const promise = fetch(url, {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'application/json'}
+      });
     promise.then(extractResponse);
-    return resolveValue;
 }
 
 //Extract the response and parse it
