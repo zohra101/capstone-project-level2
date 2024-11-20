@@ -3,9 +3,14 @@ function display(message) {
    document.write(message);
 }
 
-function output(message) {
-window.outputTag.innerHTML = message;
+function output1(message) {
+window.outputTag1.innerHTML = message;
 }
+
+function output2(message) {
+   window.outputTag2.innerHTML = message;
+   }
+   
 
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapPortfolioCard(card) {  

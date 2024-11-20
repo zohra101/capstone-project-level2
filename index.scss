@@ -54,6 +54,7 @@ body {
   font-family: $primaryFont;
   background-color: ivory;
   color: rgb(2, 5, 61, 1.0);
+  opacity: 1.0;
 }
 
 
@@ -62,6 +63,7 @@ h1 {
   font-size: 102;
   font-weight: 400;
   position: relative;
+  opacity: 1.0;
 }
 
 .signature {
@@ -119,20 +121,10 @@ h3,
 $techComm: url("assets/images/tech_comm.png");
 
 .bg-image {
+  background-image: $techComm;
   position: relative;
   height: 100%;
   width: 100%;
-  display: flex;
-  
-
-&::before {
-  content: "";
-  background-image: $techComm;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0x;
-  left: 0px;
-  opacity: .50;
-  }
+  display: inline-table;
+  opacity: .10;
 }

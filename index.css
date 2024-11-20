@@ -27,6 +27,7 @@ body {
   font-family: OpenSans;
   background-color: ivory;
   color: rgb(2, 5, 61);
+  opacity: 1;
 }
 
 h1 {
@@ -34,6 +35,7 @@ h1 {
   font-size: 102;
   font-weight: 400;
   position: relative;
+  opacity: 1;
 }
 
 .signature {
@@ -83,18 +85,10 @@ h3,
 }
 
 .bg-image {
+  background-image: url("assets/images/tech_comm.png");
   position: relative;
   height: 100%;
   width: 100%;
-  display: flex;
-}
-.bg-image::before {
-  content: "";
-  background-image: url("assets/images/tech_comm.png");
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0x;
-  left: 0px;
-  opacity: 0.5;
+  display: inline-table;
+  opacity: 0.1;
 }/*# sourceMappingURL=index.css.map */

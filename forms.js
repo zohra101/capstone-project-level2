@@ -12,28 +12,28 @@
 //  }
 
 //Submit handler
-function handleSubmit(event) {
+function emailHandleSubmit(event) {
     debugger;
     event.preventDefault();
     const inputs = event.target;
     const emailInput = inputs[3];
     const email = emailInput.value;
     window.spinner.innerHTML = "<div class='spinner-border text-primary'></div>";
-    output("<br>" + "<h5>Submitting for " + email + "...</h5><br>");
-    const promise = new Promise(serverResponse);
-    promise.then(parseResponse).then(function hideSpinner() {
+    output1("<br>" + "<h5>Submitting for " + email + "...</h5><br>");
+    const promise = new Promise(emailServerResponse);
+    promise.then(emailParseResponse).then(function hideSpinner() {
         window.spinner.innerHTML="";
         return resolveValue;
     })
 }
 
-function parseResponse(resolveValue) {
+function emailParseResponse(resolveValue) {
     const response = JSON.parse(resolveValue);
     const message = response.message;
-    output(message);
+    output1(message);
 }
 
-function serverResponse(resolve) {
+function emailServerResponse(resolve) {
     setTimeout(activateResolve, 2000);
     function activateResolve() {
         const response={
@@ -42,6 +42,38 @@ function serverResponse(resolve) {
         const finalResponse = JSON.stringify(response);
         resolve(finalResponse);
     }
-}    
+} 
+
+function callHandleSubmit(event) {
+    debugger;
+    event.preventDefault();
+    const inputs = event.target;
+    const emailInput = inputs[3];
+    const email = emailInput.value;
+    window.spinner.innerHTML = "<div class='spinner-border text-primary'></div>";
+    output2("<br>" + "<h5>Submitting scheduling request for " + email + "...</h5><br>");
+    const promise = new Promise(callServerResponse);
+    promise.then(callParseResponse).then(function hideSpinner() {
+        window.spinner.innerHTML="";
+        return resolveValue;
+    })
+}
+
+function callParseResponse(resolveValue) {
+    const response = JSON.parse(resolveValue);
+    const message = response.message;
+    output2(message);
+}
+
+function callServerResponse(resolve) {
+    setTimeout(activateResolve, 2000);
+    function activateResolve() {
+        const response={
+            message:"<h5>Your consultation scheduling request was sent successfully.</h5>"
+        }
+        const finalResponse = JSON.stringify(response);
+        resolve(finalResponse);
+    }
+}   
 
 
