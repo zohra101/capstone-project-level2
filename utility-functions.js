@@ -10,7 +10,11 @@ window.outputTag1.innerHTML = message;
 function output2(message) {
    window.outputTag2.innerHTML = message;
    }
-   
+
+function outputQotd(message) {
+      window.outputQotd.innerHTML = message;
+}
+      
 
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapPortfolioCard(card) {  

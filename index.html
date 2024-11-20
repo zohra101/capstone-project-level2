@@ -7,6 +7,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="index.css" rel="stylesheet">
   <script src="utility-functions.js"></script>
+  <script src="api.js"></script>
 </head>
 
 <body class="p-3">
@@ -33,9 +34,15 @@
   </header>
   <main>
    <br> <br>
+   <div>
+    <h1 id="mixin-welcome" class="rotate">Welcome</h1> 
+   </div>
+   <div>
+      <button onclick="handleQuoteOfTheDay()">Quote of the Day</button>
+      <div id="outputQotd"></div>
+   </div>
     <div class="container m-2 bg-image">
       <div class="row">
-        <h1 id="mixin-welcome" class="rotate">Welcome</h1> 
         <p>Hi, I'm Alex Marjanovic, a technical communicator based out of Baton Rouge, LA. Originally from New Jersey, I
         moved south to escape the cold and snow, after completing my Master's in Professional and Technical
         Communiction at the New Jersey Institute for Technology (NJIT).</p>
