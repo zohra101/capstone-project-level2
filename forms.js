@@ -21,7 +21,7 @@ function emailHandleSubmit(event) {
     window.spinner.innerHTML = "<div class='spinner-border text-primary'></div>";
     output1("<br>" + "<h5>Submitting for " + email + "...</h5><br>");
     const promise = new Promise(emailServerResponse);
-    promise.then(emailParseResponse).then(function hideSpinner() {
+    promise.then(emailParseResponse).then(function hideSpinner(resolveValue) {
         window.spinner.innerHTML="";
         return resolveValue;
     })
@@ -53,14 +53,14 @@ function callHandleSubmit(event) {
     window.spinner.innerHTML = "<div class='spinner-border text-primary'></div>";
     output2("<br>" + "<h5>Submitting scheduling request for " + email + "...</h5><br>");
     const promise = new Promise(callServerResponse);
-    promise.then(callParseResponse).then(function hideSpinner() {
+    promise.then(callParseResponse).then(function hideSpinner(resolveValue2) {
         window.spinner.innerHTML="";
-        return resolveValue;
+        return resolveValue2;
     })
 }
 
-function callParseResponse(resolveValue) {
-    const response = JSON.parse(resolveValue);
+function callParseResponse(resolveValue2) {
+    const response = JSON.parse(resolveValue2);
     const message = response.message;
     output2(message);
 }
