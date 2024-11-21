@@ -57,7 +57,7 @@ function callHandleSubmit(event) {
         window.spinner.innerHTML="";
         return resolveValue2;
     })
-}
+} 
 
 function callParseResponse(resolveValue2) {
     const response = JSON.parse(resolveValue2);

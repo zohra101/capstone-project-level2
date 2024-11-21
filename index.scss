@@ -6,6 +6,7 @@
 @mixin redTextShadow {
   text-shadow: 1px 1px rgb(95, 85, 85);
 }
+
 #mixin-welcome {
   @include orangeText;
   @include redTextShadow;
@@ -94,14 +95,10 @@ h3,
   opacity: 1.0;
 }
 
-//Transform
-.rotate {
-  transform: rotate(03deg);
-}
-
-//Transition
-.animate {
-   transition: scale(2)
+//Transform rotate and animate
+ .animation:hover {
+  transform: scale(1) rotate(20deg);
+  transition: transform 1s;
 }
 
 //Text-shadow & Box-shadow

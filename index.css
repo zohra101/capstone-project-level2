@@ -64,12 +64,9 @@ h3,
   opacity: 1;
 }
 
-.rotate {
-  transform: rotate(3deg);
-}
-
-.animate {
-  transition: scale(2);
+.animation:hover {
+  transform: scale(1) rotate(20deg);
+  transition: transform 1s;
 }
 
 .boxShadowUL {

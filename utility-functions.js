@@ -15,6 +15,11 @@ function outputQotd(message) {
       window.outputQotd.innerHTML = message;
 }
       
+function handleIndexLoad(event) {
+
+
+}
+
 
 //AUTOMATICALLY CREATE BOOTSTRAPPED CARDS ON THE PORTFOLIO PAGE
 function bootstrapPortfolioCard(card) {  

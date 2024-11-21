@@ -1,7 +1,6 @@
-
 //Fetch the response from the server
 function handleQuoteOfTheDay() {
-    const proxy = "https://thingproxy.freeboard.io/fetch/"
+    const proxy = "https://corsproxy.io/?"
     const baseUrl = "https://favqs.com/api";
     const endPoint = "/qotd";
     const url = proxy + baseUrl + endPoint;
@@ -17,9 +16,13 @@ function extractResponse(resolveValue) {
     promise.then(parseQotdResponse);
 }
 
-//Parse the response
+//Parse the response and display the qotd on the index page
 function parseQotdResponse(resolveValue) {
     debugger;
     const response = JSON.parse(resolveValue);
-    outputQotd(response);
+    const results =  response.quote;
+    const quote = results.body;
+    const author= results.author;
+    const qotd = `${quote} -- ${author}`;
+    outputQotd(qotd);
 }
