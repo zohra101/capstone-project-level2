@@ -12,12 +12,7 @@ function output2(message) {
    }
 
 function outputQotd(message) {
-      window.outputQotd.innerHTML = message;
-}
-      
-function handleIndexLoad(event) {
-
-
+      window.outputQotdTag.innerHTML = message;
 }
 
 
