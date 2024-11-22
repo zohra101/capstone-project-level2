@@ -26,3 +26,5 @@ function parseQotdResponse(resolveValue) {
     const qotd = `${quote} -- ${author}`;
     outputQotd(qotd);
 }
+
+
